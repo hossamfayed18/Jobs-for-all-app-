@@ -13,8 +13,9 @@ class Layout_Screen extends StatelessWidget {
     var cubit = Layout_Cubit.get(context) ;
     return BlocConsumer<Layout_Cubit,LayoutStates>(
         listener: (context,state){
-        if(state is AddNewPostState)
+        if(state is AddNewPostState) {
           navigatorTo(context, New_Post_Screen());
+        }
         },
       builder: (context,state){
           return Scaffold(
@@ -29,32 +30,22 @@ class Layout_Screen extends StatelessWidget {
               onTap: (index){
                 cubit.changeBottomNavIndex(index) ;
               },
-              items: [
+              items: const [
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    IconBroken.Home,
-                  ) ,
+                  icon: Icon(IconBroken.Home,) ,
                   label: 'Home',
-
                 ),
+
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    IconBroken.Chat,
-                  ) ,
+                  icon: Icon(IconBroken.Chat,) ,
                   label: 'Chats',
-
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    IconBroken.Paper_Upload,
-                  ) ,
+                  icon: Icon(IconBroken.Paper_Upload,) ,
                   label: 'Post',
-
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(
-                    IconBroken.Setting,
-                  ) ,
+                  icon: Icon(IconBroken.Setting,) ,
                   label: 'Settings',
 
                 ),

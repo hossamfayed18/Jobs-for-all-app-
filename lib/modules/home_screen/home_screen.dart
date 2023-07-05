@@ -35,7 +35,7 @@ class Home_Screen extends StatelessWidget {
                     child: Stack(
                       alignment: AlignmentDirectional.centerEnd,
                       children: [
-                        Image(
+                        const Image(
                           image: AssetImage(
                               'assets/images/img2.jpg'
                           ),
@@ -195,7 +195,7 @@ class Home_Screen extends StatelessWidget {
                         );
                       }
                   ) ,
-                  SizedBox(height: 8,),
+                  const SizedBox(height: 8,),
                 ],
               ),
             ),

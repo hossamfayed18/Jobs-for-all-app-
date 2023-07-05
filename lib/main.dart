@@ -12,7 +12,6 @@ import 'package:jobs_for_all/shared/bloc_observer.dart';
 import 'package:jobs_for_all/shared/network/cache_helper.dart';
 import 'package:jobs_for_all/shared/style/themes/themes.dart';
 
-import 'shared/components/constants.dart';
 
 
 void main() async {
@@ -23,12 +22,12 @@ void main() async {
   Bloc.observer = MyBlocObserver();
    
   
-  uid = CacheHelper.getData(key: 'uid');
+ // uid = CacheHelper.getData(key: 'uid') ?? "F6PjS5uo2kgS0SZSWmI4XgqcEnI3" ;
+
 
   
   runApp(MyApp());
 
-       //Myapp here calls 1- empty constructor 2-build method
 }
 
 
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return BlocProvider(
-         create: (context)=>Layout_Cubit()..getUser()..getAllPosts()..getMyPosts()..getChats(),
+         create: (context)=>Layout_Cubit()..getAllPosts()..getMyPosts()..getChats(),
          child:BlocConsumer<Layout_Cubit,LayoutStates>(
            listener:(context,state){} ,
            builder: (context,state){

@@ -11,7 +11,6 @@ import 'package:jobs_for_all/modules/chat_details/chat_details.dart';
 import '../../shared/components/components.dart';
 
 class Chats_Screen extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<Layout_Cubit,LayoutStates>(

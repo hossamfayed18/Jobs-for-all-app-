@@ -15,6 +15,8 @@ import 'package:jobs_for_all/modules/others_profile/others_profile.dart';
 import 'package:jobs_for_all/modules/settings_screen/settings_screen.dart';
 import 'package:jobs_for_all/shared/components/components.dart';
 import 'package:jobs_for_all/shared/components/constants.dart';
+
+
 class  Layout_Cubit extends Cubit<LayoutStates> {
   Layout_Cubit() :super(LayoutInitialState());
 
@@ -89,6 +91,10 @@ void changeItem_DropDownMenue(String item)
 File ? postImage ;
 var postImagePicker =ImagePicker();
 
+
+
+
+
   Future<void> getPostImage() async {
     final pickedFile =
     await postImagePicker.pickImage(source: ImageSource.gallery);
@@ -112,7 +118,8 @@ var postImagePicker =ImagePicker();
     String ? phoneOrEmail ,
     String ? place ,
     String ? requirements,
-  }){
+  })
+  {
     emit(LoadingCreatePostState());
     var now = DateTime.now();
     PostModel model= PostModel(
@@ -157,7 +164,6 @@ var postImagePicker =ImagePicker();
     });
 
   }
-
 
 
 
@@ -403,7 +409,6 @@ var postImagePicker =ImagePicker();
       emit(GetMyPostsErrorState());
     });
   }
-
 
   void getengineeringPosts (){   //1
 

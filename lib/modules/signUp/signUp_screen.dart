@@ -27,11 +27,11 @@ class  SignUp extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.grey[200],
             ),
-            body: Container(
+            body: SizedBox(
               height: 2000,
               child: Stack(
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/images/img_3.png'),
                     height: 2000,
                     width: double.infinity,
@@ -41,7 +41,7 @@ class  SignUp extends StatelessWidget {
                   Center(
                     child: SingleChildScrollView(
                       child: Padding(
-                        padding: EdgeInsetsDirectional.all(20),
+                        padding: const EdgeInsetsDirectional.all(20),
                         child: Form(
                           key: myformkey,
                           child: Column(
@@ -55,7 +55,7 @@ class  SignUp extends StatelessWidget {
 
                               ),
 
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               defaultTFF(
                                 mycontroller: nameController,
                                 mykeyboardType: TextInputType.name,
@@ -67,7 +67,7 @@ class  SignUp extends StatelessWidget {
                                   return null ;
                                 },
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               defaultTFF(
                                 mycontroller: emailController,
                                 mykeyboardType: TextInputType.emailAddress,
@@ -79,7 +79,7 @@ class  SignUp extends StatelessWidget {
                                   return null ;
                                 },
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               defaultTFF(
                                 mycontroller:passController ,
                                 mykeyboardType: TextInputType.visiblePassword,
@@ -97,8 +97,8 @@ class  SignUp extends StatelessWidget {
                             },
 
                               ),
-                              SizedBox(height: 20),
-                              Text(
+                              const SizedBox(height: 20),
+                              const Text(
                                 '* Optional',
                                 style: TextStyle(
                                   fontSize: 16,
@@ -106,7 +106,7 @@ class  SignUp extends StatelessWidget {
                                   color:Colors.brown ,
                                 ),
                               ),
-                              SizedBox(height: 4,),
+                              const SizedBox(height: 4,),
                               defaultTFF(
                                 mycontroller: phoneController,
                                 mykeyboardType: TextInputType.phone,
@@ -114,10 +114,10 @@ class  SignUp extends StatelessWidget {
                                 myprefixIcon: Icons.phone,
 
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               ConditionalBuilder(
                               condition:  state is ! CreateUserLoadingState ,
-                                fallback: (context)=>Center(child: CircularProgressIndicator()),
+                                fallback: (context)=>const Center(child: CircularProgressIndicator()),
                                 builder:(context)=>  defaultButton(
                                   function: (){
                                     if(myformkey.currentState!.validate()) {

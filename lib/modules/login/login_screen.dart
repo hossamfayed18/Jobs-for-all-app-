@@ -26,7 +26,7 @@ class Login extends StatelessWidget {
                child: Stack(
                  alignment: AlignmentDirectional.centerStart ,
                  children: [
-                   Image(
+                   const Image(
                        image: AssetImage('assets/images/img_3.png'),
                      height: 2000,
                      width: double.infinity,
