@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      return BlocProvider(
-         create: (context)=>Layout_Cubit()..getAllPosts()..getMyPosts()..getChats(),
+         create: (context)=>Layout_Cubit()..getAllPosts() ,
          child:BlocConsumer<Layout_Cubit,LayoutStates>(
            listener:(context,state){} ,
            builder: (context,state){

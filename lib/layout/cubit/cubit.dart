@@ -665,6 +665,7 @@ List<UserModel> chatsList =[] ;
   List<MessageModel>messages =[];
 
   void getMessages (String recieverUid){
+    messages =[] ;
     FirebaseFirestore.instance.collection('users').doc(userModel!.uid).collection('chats').doc(recieverUid).collection('messages').orderBy('dateTime')
         .snapshots().listen((event) {
       messages =[] ;

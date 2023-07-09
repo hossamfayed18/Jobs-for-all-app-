@@ -181,7 +181,7 @@ class Home_Screen extends StatelessWidget {
                     ),
                   ),
                   ConditionalBuilder(
-                      condition:state is! LoadingGetAllPostsState && state is! LoadingGetCatPostsState && Layout_Cubit.get(context).mylist.length!=0,
+                      condition:state is! LoadingGetAllPostsState && state is! LoadingGetCatPostsState ,
                       fallback: (BuildContext context) {
                         return CircularProgressIndicator();
                       },
